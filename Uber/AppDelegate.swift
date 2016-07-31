@@ -15,7 +15,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        return true
+
+        window = UIWindow(frame: UIScreen.mainScreen().bounds)
+        showGuidePage()
+         return true
     }
 
     func applicationWillResignActive(application: UIApplication) {
@@ -35,6 +38,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillTerminate(application: UIApplication) {
 
+    }
+    
+    func showGuidePage() {
+        let page = GuidePage()
+        self.window?.rootViewController = page
+        self.window?.makeKeyAndVisible()
+        
     }
 
 
